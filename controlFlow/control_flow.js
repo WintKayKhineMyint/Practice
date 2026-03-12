@@ -49,3 +49,22 @@ let isAuthenticated = true;
 
 let authenticationStatus = isAuthenticated ? "Authenticated": "Not Authenticated";
 console.log("Authentication Status:",authenticationStatus);
+
+function checkAccess(role){
+    if(role === "Employee"){
+        console.log("You are authorized to Dietary Services.");
+    }else if (role === "Enrolled Member"){
+        console.log("You are authorized to have access with one to one interation with a dietician.");
+    }else if(role === "Subscriber"){
+        console.log("You are authorized to have part of the services.")
+    }else if (role === "Non-subscriber"){
+        console.log("You need to enroll or at lease subscribe.")
+    }else {
+        console.log("Role not recognized.")
+    }
+}
+checkAccess("Employee");
+checkAccess("Enrolled Member");
+checkAccess("Subscriber");
+checkAccess("Non-subscriber");
+checkAccess("Adam");
